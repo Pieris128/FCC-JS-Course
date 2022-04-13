@@ -19,7 +19,7 @@ function multiplyAll(arr) {
     // Only change code below this line
   for (let i = 0; i < arr.lenght; i++) { // [i] accede al arreglo y selecciona uno de los arreglos internos, nested arrays
     for (let j = 0; j < arr[i].length; j++) { // [j] itera dentro de los arreglos seleccionados x [i].
-      product *= arr[i][j] // tomamos los valores uno a la vez tal que arr[0][0] = 1; arr[0][1] = 2; then arr[1][0]=3; arr[1][1]=4; and so it goes on and ond and on till i = arr.lenght    }
+      product *= arr[i][j]; // tomamos los valores uno a la vez tal que arr[0][0] = 1; arr[0][1] = 2; then arr[1][0]=3; arr[1][1]=4; and so it goes on and ond and on till i = arr.lenght    }
   }
     // Only change code above this line
     return product;
