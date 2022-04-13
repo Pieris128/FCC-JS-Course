@@ -60,7 +60,7 @@ const contacts = [
   lookUpProfile("Akira", "likes");
 
   /* he aqui abajo otra solucion */ 
-
+/*
   function lookUpProfile(name, prop) {
     for (let i = 0; i < contacts.length; i++) {
       if (contacts[i].firstName === name) {
@@ -73,3 +73,4 @@ const contacts = [
     }
     return "No such contact";
   }
+  */
