@@ -42,20 +42,34 @@ const contacts = [
   
   function lookUpProfile(name, prop) {
     // Cambia solo el código debajo de esta línea
-  for (let i = 0; i < contacts.lenght; i++) {
-    if (contacts[i].firstname === name){
-      if (contacts[i].hasOwnProperty(prop)){
-        return contacts[i][prop];
+   for (let x = 0; x < contacts.length; x++) {
+      if (contacts[x].firstName === name) {
+        if (contacts[x].hasOwnProperty(prop)) {
+          return contacts[x][prop];
         } else {
-        return "No such property";
+          return "No such property";
+        }
       }
-    }  else {
-      return "No such contact";
     }
-  }
-}
-
-    // Cambia solo el código encima de esta línea
+    return "No such contact";
   
+    
+    // Cambia solo el código encima de esta línea
+  }
   
   lookUpProfile("Akira", "likes");
+
+  /* he aqui abajo otra solucion */ 
+
+  function lookUpProfile(name, prop) {
+    for (let i = 0; i < contacts.length; i++) {
+      if (contacts[i].firstName === name) {
+        if (prop in contacts[i]) {
+          return contacts[i][prop];
+        } else {
+          return "No such property";
+        }
+      }
+    }
+    return "No such contact";
+  }
