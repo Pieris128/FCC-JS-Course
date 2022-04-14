@@ -11,23 +11,18 @@
 
 
 <script>
-function randomFraction() {
-
-// Cambia solo el código debajo de esta línea
-let result = 0;
- // Math.random() can generate 0. We don't want to     return a 0,
-// so keep generating random numbers until we get one     that isn't 0
-while (result === 0) {
-  result= Math.random();
+function countdown(n) {
+  if (n < 1) {
+    return [];
+  } else {
+    const arr = countdown(n - 1);
+    arr.unshift(n);
+    return arr;
+  }
 }
-
-return result;
-
-// Cambia solo el código encima de esta línea
-}
-
-let hola = randomFraction();
-console.log(hola);
+	
+	const arr = countdown(5);
+  console.log(arr)
 </script>
 
 
